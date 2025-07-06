@@ -4,25 +4,36 @@ import procketsTeam from "../components/Images/procketsTeamPic.png";
 export default function OurMission() {
     return (
         <>
-            <header className="text-center pt-24 flex flex-col justify-center items-center">
-                <h1 className="font-bold text-4xl sm:text-6xl">Our Mission</h1>
-                <p className="w-3/5 p-10">
+            <header className="text-center pt-24 flex flex-col justify-center items-center px-4">
+                <h1 className="font-bold text-4xl sm:text-6xl mb-6">Our Mission</h1>
+                <p className="max-w-3xl text-base sm:text-lg mb-10">
                     Traditional prosthetic sockets are costly, time-consuming, and made from non-recyclable 
                     materials, making them inaccessible for many. Prockets offers an adjustable, 3D-printed 
                     socket made from recyclable materials like PETG and HDPE, cutting both time and cost. 
                 </p>
-                <div className="mb-20 flex flex-col justify-center items-center">
-                    <img src={procketsTeam} alt="Prockets Team Pic 2025" className="rounded-xl w-3/5"/>
+                <div className="mb-20 flex flex-col justify-center items-center w-full">
+                    <img 
+                        src={procketsTeam} 
+                        alt="Prockets Team Pic 2025" 
+                        className="rounded-xl w-full max-w-xl object-cover" 
+                    />
                 </div>
             </header>
+
             {/* timeline section */}
-            <section className="text-center flex flex-col justify-center items-center bg-[#ece8e7] py-20">
+            <section className="text-center flex flex-col justify-center items-center bg-[#ece8e7] py-20 px-4">
                 <h2 className="font-bold text-4xl mb-8">Our Timeline</h2>
-                <img src={timelineImage} alt="Timeline Diagram" className="rounded-xl w-3/5"/>
+                <img 
+                    src={timelineImage} 
+                    alt="Timeline Diagram" 
+                    className="rounded-xl w-full max-w-3xl object-cover" 
+                />
             </section>
+
             {/* History section */}
             <section className="px-4 md:px-28 py-16 flex flex-col items-center">
                 <h2 className="text-center font-bold text-4xl mb-16">Our History</h2>
+
                 {[
                     {
                     year: "2021 - 2022",
@@ -75,25 +86,34 @@ export default function OurMission() {
                     ]
                     }
                 ].map((entry, i) => (
-                    <div key={i} className="mb-20 flex w-full max-w-5xl">
-                    {/* Year label */}
-                    <div className="w-24 flex justify-center items-center">
-                        <h4 className="font-semibold text-3xl -rotate-90 whitespace-nowrap text-[#fec024]">{entry.year}</h4>
-                    </div>
+                    <div 
+                        key={i} 
+                        className="mb-20 flex flex-col md:flex-row w-full max-w-5xl"
+                    >
+                        {/* Year label */}
+                        <div className="flex justify-center items-center md:w-24 mb-4 md:mb-0">
+                            <h4 className="font-semibold text-2xl md:text-3xl md:-rotate-90 text-[#fec024] whitespace-nowrap">
+                                {entry.year}
+                            </h4>
+                        </div>
 
-                    {/* Content */}
-                    <div className="flex-1 pl-6">
-                        {entry.title && <h4 className="font-semibold text-xl mb-4">{entry.title}</h4>}
-                        <p className="mb-3">{entry.description}</p>
-                        <ul className="list-disc pl-6 space-y-2">
-                        {entry.bullets.map((point, idx) => (
-                            <li key={idx}>{point}</li>
-                        ))}
-                        </ul>
-                    </div>
+                        {/* Content */}
+                        <div className="flex-1 md:pl-6">
+                            {entry.title && (
+                                <h4 className="font-semibold text-xl mb-4">
+                                    {entry.title}
+                                </h4>
+                            )}
+                            <p className="mb-3">{entry.description}</p>
+                            <ul className="list-disc pl-6 space-y-2">
+                                {entry.bullets.map((point, idx) => (
+                                    <li key={idx}>{point}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 ))}
-                </section>
+            </section>
         </>
     )
 }

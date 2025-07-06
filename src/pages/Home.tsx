@@ -2,29 +2,34 @@ import Image from "../components/Images/Procket homepage background.png"
 
 export default function Home() {
   return (
-    <>
-      <div className="w-full">
-        <div style={styles.heroTop}>
-          <img
-            src={Image}
-            style={styles.heroImage}
-          />
-          <div style={styles.triangleDivider}></div>
-          <div className="flex justify-center items-center h-dvh ">
-            <h1 className=" text-white font-josefin mb-40 text-9xl tracking-[0.43em] opacity-100">PROCKETS</h1>
-          </div>
-        </div>
+    <div className="w-full">
+      {/* Hero Top */}
+      <div style={styles.heroTop}>
+        <img
+          src={Image}
+          style={styles.heroImage}
+          alt="Hero Background"
+        />
 
-        <div style={styles.heroBottom}>
+        {/* Triangle Divider */}
+        <div style={styles.triangleDivider}></div>
+
+        {/* Centered Text */}
+        <div className="relative z-10 flex justify-center items-center h-screen px-4">
+          <h1 className="text-white font-josefin tracking-[0.25em] text-[clamp(2rem,8vw,6rem)] text-center">
+            PROCKETS
+          </h1>
         </div>
       </div>
 
-
-    </>
+      {/* Hero Bottom Section */}
+      <div className="bg-white px-4 py-8">
+        {/* Future content */}
+      </div>
+    </div>
   );
 }
 
-//"Hero" is a weird webdev industry standard
 const styles = {
   heroTop: {
     position: 'relative' as const,
@@ -45,12 +50,8 @@ const styles = {
     backgroundColor: 'white',
     opacity: 1,
     position: 'absolute' as const,
+    bottom: 0,
     width: '100%',
-    height: '100%',
-    objectFit: 'cover' as const,
-  },
-  heroBottom: {
-    backgroundColor: 'white',
-    padding: '2rem',
+    height: '20vh',
   },
 };
