@@ -1,15 +1,16 @@
-//To create a custome dropdown or to get one from a bank that is the question :(?  
+//To create a custom dropdown or to get one from a bank that is the question :(?  
 import Dropdown, { DropdownItem } from 'components/organisms/Dropdown'
 import ENACTUSLOGO from './Images/Enactus Logo.png'
 import PROCKETSLOGO from './Images/Prockets Logo notext.png'
-import { Routes, Route } from "react-router";
+
+import { Link } from "react-router";
 
 const Header = () => {
     //Model for dropdown boxes
     const aboutUsItems: DropdownItem[] = [
-            { label: 'Our Mission', href: '/about-us/mission' },
-            { label: 'Our Service', href: '/about-us/service' },
-            { label: 'Our Product', href: '/about-us/product' },
+            { label: 'Our Mission', to: '/about-us/mission' },
+            { label: 'Our Services', to: '/about-us/services' },
+            { label: 'Our Products', to: '/about-us/products' },
     ];
 
     return (
@@ -22,11 +23,11 @@ const Header = () => {
                     </a>
                 </div>
                 <div className="flex space-x-16 mx-10">
-                    <a href="/home" className="hover:underline">Home</a>
+                    <Link to="/" className="hover:underline">Home</Link>
                     <Dropdown label="About Us" items={aboutUsItems} />
-                    <a href="/resources" className="hover:underline ">Resources</a>
-                    <a href="/support" className="hover:underline ">Support</a>
-                    <a href="/contact-us" className="hover:underline ">Contact </a>
+                    <Link to="/resources" className="hover:underline">Resources</Link>
+                    <Link to="/support" className="hover:underline">Support</Link>  
+                    <Link to="/contact-us" className="hover:underline">Contact Us</Link>  
                 </div>
             </nav>
         </header>

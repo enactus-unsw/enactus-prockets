@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router';
 
 //Import wherever you need a dropdown (Example ussage in header.tsx)
 export type DropdownItem = {
   label: string;
-  href: string;
+  to: string;
 };
 
 type DropdownProps = {
@@ -37,7 +38,7 @@ const Dropdown: React.FC<DropdownProps> = ({ label = 'Dropdown', items }) => {
         ...(isOpen ? styles.contentVisible : {})
       }}>
         {items.map((item, idx) => (
-          <a key={idx} href={item.href} style={styles.link}>{item.label}</a>
+          <Link key={idx} to={item.to} style={styles.link}>{item.label}</Link>
         ))}
       </div>
     </div>
