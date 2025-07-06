@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center space-x-2">
           <img src={ENACTUSLOGO} className="h-8 w-auto max-w-[120px] object-contain" alt="Enactus" />
           <img src={PROCKETSLOGO} className="h-12 w-auto max-w-[120px] object-contain" alt="Prockets" />
-          <a href="/" className="font-bold hidden sm:inline">ENACTUS | PROCKETS</a>
+          <Link to="/" className="font-bold hidden sm:inline">ENACTUS | PROCKETS</Link>
         </div>
 
         {/* Desktop nav */}
