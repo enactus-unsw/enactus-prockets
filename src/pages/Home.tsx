@@ -1,4 +1,8 @@
-import Image from "../components/Images/Procket homepage background.png"
+import Image from "../components/Images/Procket homepage background.png";
+import missionImage from "../components/Images/missionImg.png";
+import serviceImage from "../components/Images/serviceImg.png";
+import productImage from "../components/Images/productImg.png";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -22,9 +26,23 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Hero Bottom Section */}
-      <div className="bg-white px-4 py-8">
-        {/* Future content */}
+      <div className="px-4 py-20 flex flex-col md:flex-row justify-center items-center gap-12 bg-white">
+        {[
+          { label: "MISSION", image: missionImage, to: '/about-us/mission' },
+          { label: "SERVICE", image: serviceImage, to: '/about-us/services' },
+          { label: "PRODUCT", image: productImage, to: '/about-us/products' }
+        ].map((item, idx) => (
+          <Link key={idx} to={item.to} className="relative w-full max-w-xs overflow-hidden shadow-lg">
+            <div className="absolute top-3 left-1/2 -translate-x-1/2 px-4 py-16 text-xl md:text-5xl font-semibold text-white">
+              {item.label}
+            </div>
+            <img
+              src={item.image}
+              alt={`${item.label} Image`}
+              className="w-full object-cover"
+            />
+          </Link>
+        ))}
       </div>
     </div>
   );
