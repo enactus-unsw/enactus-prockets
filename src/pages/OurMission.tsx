@@ -1,13 +1,17 @@
-import timelineImage from "../components/Images/timeline.png"
+import timelineImage from "../components/Images/timeline.png";
+import procketsTeam from "../components/Images/procketsTeamPic.png";
 
 export default function OurMission() {
     return (
         <>
             <header className="text-center pt-24 md:pb-14">
-                <h1 className="font-bold text-4xl sm:text-6xl mb-8">Our Mission</h1>
+                <h1 className="font-bold text-4xl sm:text-6xl">Our Mission</h1>
             </header>
+            <div className="flex flex-col justify-center items-center mb-20">
+                <img src={procketsTeam} alt="Prockets Team Pic 2025" className="rounded-xl w-3/5"/>
+            </div>
             {/* timeline section */}
-            <section className="text-center flex flex-col justify-center items-center">
+            <section className="text-center flex flex-col justify-center items-center bg-[#ece8e7] py-20">
                 <h2 className="font-bold text-4xl mb-8">Our Timeline</h2>
                 <img src={timelineImage} alt="Timeline Diagram" className="rounded-xl w-3/5"/>
             </section>
@@ -85,11 +89,6 @@ export default function OurMission() {
                     </div>
                 ))}
                 </section>
-
-            {/* Past events */}
-            <section>
-                <h2 className="font-bold text-4xl">Past Events</h2>
-            </section>
         </>
     )
 }

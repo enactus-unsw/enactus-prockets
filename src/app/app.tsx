@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import OurMission from "../pages/OurMission";
 import OurServices from "../pages/OurServices";
 import OurProducts from "../pages/OurProducts";
-import Resources from "../pages/Resources";
+import Events from "../pages/Events";
 import Support from "../pages/Support";
 import ContactUs from "../pages/ContactUs";
 
@@ -41,7 +41,7 @@ function AnimatedRoutes() {
         <Route path="/about-us/mission" element={<PageWrapper><OurMission /></PageWrapper>} />
         <Route path="/about-us/services" element={<PageWrapper><OurServices /></PageWrapper>} />
         <Route path="/about-us/products" element={<PageWrapper><OurProducts /></PageWrapper>} />
-        <Route path="/resources" element={<PageWrapper><Resources /></PageWrapper>} />
+        <Route path="/events" element={<PageWrapper><Events /></PageWrapper>} />
         <Route path="/support" element={<PageWrapper><Support /></PageWrapper>} />
         <Route path="/contact-us" element={<PageWrapper><ContactUs /></PageWrapper>} />
       </Routes>
