@@ -1,49 +1,24 @@
-import { Card, CardActionArea, CardContent, Typography } from "@mui/material"
+import PastEventCards from "components/past-event-cards";
 
 export default function Events() {
-    return (
-        <>
-            {/* Past events */}
-            <section className="text-center flex flex-col justify-center items-center">
-                <h2 className="font-bold text-4xl">Past Events</h2>
-                <Card
-                    sx={{
-                        width: 300,
-                        height: 380,
-                        borderRadius: 5,
-                        boxShadow: "0 4px 20px 0 rgba(0, 0, 0, 0.12)",
-                        position: "relative",
-                        overflow: "hidden",
-                        transition: "0.4s cubic-bezier(0.5, 1.6, 0.4, 0.8)",
-                        "&:hover": {
-                        boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-                        transform: "scale(1.06)",
-                        },
-                        "&:hover .descriptionBox": {
-                        opacity: 1,
-                        transform: "translateY(0%)",
-                        }
-                    }}
-                >
-                    <CardActionArea sx={{ height: '100%' }}>
-                    <CardContent 
-                    sx={{ 
-                        height: '100%', 
-                        display: 'flex', 
-                        flexDirection: 'column', 
-                        alignItems: 'center',
-                        textAlign: 'center',
-                        justifyContent: 'center', 
-                        gap: 2
-                    }}
-                    >
-                    <Typography variant="h5" component="div" sx={{ fontWeight: 600 }}>
-                        hello
-                    </Typography>
-                    </CardContent>
-                </CardActionArea>
-                </Card>
-            </section>
-        </>
-    )
+  return (
+    <div>
+      <header className="w-5/6 mx-auto rounded-3xl overflow-hidden text-center mt-10">
+        <div className="flex items-center justify-center px-4 pt-20">
+          <h1 className="font-bold text-[clamp(24px,6vw,100px)] text-black drop-shadow-lg bg-gradient-to-r from-[#FFDD83] to-[#FFC222] bg-clip-text text-transparent">
+            Our Events
+          </h1>
+        </div>
+      </header>
+      <section className="pt-6 pb-10 text-center">
+        {/* Year */}
+        <button className="bg-[#FFDD83] font-semibold text-black mb-8 rounded-full py-3 px-6">
+          2025
+        </button>
+        <div className="flex flex-col justify-center items-center mb-12">
+          <PastEventCards />
+        </div>
+      </section>
+    </div>
+  )
 }

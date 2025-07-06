@@ -4,12 +4,17 @@ import procketsTeam from "../components/Images/procketsTeamPic.png";
 export default function OurMission() {
     return (
         <>
-            <header className="text-center pt-24 md:pb-14">
+            <header className="text-center pt-24 flex flex-col justify-center items-center">
                 <h1 className="font-bold text-4xl sm:text-6xl">Our Mission</h1>
+                <p className="w-3/5 p-10">
+                    Traditional prosthetic sockets are costly, time-consuming, and made from non-recyclable 
+                    materials, making them inaccessible for many. Prockets offers an adjustable, 3D-printed 
+                    socket made from recyclable materials like PETG and HDPE, cutting both time and cost. 
+                </p>
+                <div className="mb-20 flex flex-col justify-center items-center">
+                    <img src={procketsTeam} alt="Prockets Team Pic 2025" className="rounded-xl w-3/5"/>
+                </div>
             </header>
-            <div className="flex flex-col justify-center items-center mb-20">
-                <img src={procketsTeam} alt="Prockets Team Pic 2025" className="rounded-xl w-3/5"/>
-            </div>
             {/* timeline section */}
             <section className="text-center flex flex-col justify-center items-center bg-[#ece8e7] py-20">
                 <h2 className="font-bold text-4xl mb-8">Our Timeline</h2>
@@ -73,7 +78,7 @@ export default function OurMission() {
                     <div key={i} className="mb-20 flex w-full max-w-5xl">
                     {/* Year label */}
                     <div className="w-24 flex justify-center items-center">
-                        <h4 className="font-semibold text-3xl -rotate-90 whitespace-nowrap">{entry.year}</h4>
+                        <h4 className="font-semibold text-3xl -rotate-90 whitespace-nowrap text-[#fec024]">{entry.year}</h4>
                     </div>
 
                     {/* Content */}
