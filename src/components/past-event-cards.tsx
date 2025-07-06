@@ -11,7 +11,7 @@ import innovationExperience from "../components/Images/innovationExperience.jpg"
 
 const events = [
   {
-    id: 5,
+    id: 1,
     title: "Enactus UNSW Innovation Experience",
     description: "We hosted an interactive workshop for high school students, challenging them to design and prototype prosthetic arms using everyday materials in the Milk Bottle Challenge. Working in teams, participants competed to create functional designs tested for strength, creativity, and real-world feasibility, mirroring the core values behind Prockets. The day also featured a lively panel with current UNSW students, offering valuable insights and an open Q&A for aspiring innovators.",
     link: "",
