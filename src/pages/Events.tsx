@@ -3,9 +3,9 @@ import PastEventCards from "components/past-event-cards";
 export default function Events() {
   return (
     <div>
-      <header className="w-5/6 mx-auto rounded-3xl overflow-hidden text-center mt-10">
-        <div className="flex items-center justify-center px-4 pt-20">
-          <h1 className="font-bold text-[clamp(24px,6vw,100px)] text-black drop-shadow-lg bg-gradient-to-r from-[#FFDD83] to-[#FFC222] bg-clip-text text-transparent">
+      <header className="max-w-5xl w-full mx-auto rounded-3xl overflow-hidden text-center mt-10 px-4">
+        <div className="flex items-center justify-center pt-16 sm:pt-20">
+          <h1 className="font-bold text-[clamp(32px,8vw,80px)] text-black drop-shadow-lg bg-gradient-to-r from-[#FFDD83] to-[#FFC222] bg-clip-text text-transparent">
             Our Events
           </h1>
         </div>
