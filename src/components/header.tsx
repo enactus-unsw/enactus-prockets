@@ -12,7 +12,7 @@ const Header = () => {
         ];
 
         return (
-                <header className="text-white font-sans select-none ">
+                <header className="text-white font-sans select-none fixed top-0 w-full z-50 ">
                         <nav className="mx-auto flex h-20 items-center justify-between text-lg text-black bg-white/100 ">
                                 <div className="flex items-center space-x-2 mx-2">
                                         <img src={ENACTUSLOGO} className="h-8 w-auto max-w-[120px] object-contain"></img>
