@@ -23,10 +23,9 @@ const Header = () => {
                                 <div className="flex space-x-16 mx-2  ">
                                         <a href="/home" className="hover:underline">Home</a>
                                         <Dropdown label="About us" items={aboutUsItems} />
-                                        <Dropdown label="Ressources" items={aboutUsItems} />
+                                        <Dropdown label="Resources" items={aboutUsItems} />
                                         <Dropdown label="Support" items={aboutUsItems} />
                                         <a href="/contact-us" className="hover:underline ">Contact us </a>
-
                                 </div>
 
                         </nav>
