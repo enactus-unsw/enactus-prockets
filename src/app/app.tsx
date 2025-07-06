@@ -52,7 +52,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename="/enactus-prockets">
         <Header />
         <AnimatedRoutes />
       </BrowserRouter>
