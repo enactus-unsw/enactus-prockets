@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActionArea from '@mui/material/CardActionArea';
 import { CardMedia } from '@mui/material';
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 // Images of the event cover pictures
 import projectWeek from "../components/Images/projectsWeek.jpg";

@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, useLocation } from "react-router";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Home from "../pages/Home";
@@ -52,10 +52,10 @@ function AnimatedRoutes() {
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <HashRouter>
+      <BrowserRouter>
         <Header />
         <AnimatedRoutes />
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

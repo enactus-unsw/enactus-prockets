@@ -3,7 +3,7 @@ import Dropdown, { DropdownItem } from 'components/organisms/Dropdown'
 import ENACTUSLOGO from './Images/Enactus Logo.png'
 import PROCKETSLOGO from './Images/Prockets Logo notext.png'
 
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     //Model for dropdown boxes
