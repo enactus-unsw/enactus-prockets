@@ -4,6 +4,7 @@ import procketsTeam from "../components/Images/procketsTeamPic.png";
 export default function OurMission() {
     return (
         <>
+            {/* header */}
             <header className="text-center pt-24 flex flex-col justify-center items-center px-4">
                 <h1 className="font-bold text-4xl sm:text-6xl mb-6">Our Mission</h1>
                 <p className="max-w-3xl text-base sm:text-lg mb-10">
