@@ -10,9 +10,9 @@ export default function Support() {
             </header>
 
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 px-4 pb-16">
-                <img src={limbs4Life} alt="Limbs4Life Logo" className="max-w-[200px] w-full h-auto"/>
-                <img src={amputeesNSW} alt="Amputees NSW Logo" className="max-w-[200px] w-full h-auto"/>
-                <img src={oapl} alt="OAPL Logo" className="max-w-[200px] w-full h-auto"/>
+                <img src={limbs4Life} alt="Limbs4Life Logo" className="max-w-[250px] w-full h-auto"/>
+                <img src={amputeesNSW} alt="Amputees NSW Logo" className="max-w-[250px] w-full h-auto"/>
+                <img src={oapl} alt="OAPL Logo" className="max-w-[250px] w-full h-auto"/>
             </div>
         </>
     )
