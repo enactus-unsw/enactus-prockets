@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, HashRouter } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Home from "../pages/Home";
@@ -52,10 +52,10 @@ function AnimatedRoutes() {
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter basename="/enactus-prockets">
+      <HashRouter >
         <Header />
         <AnimatedRoutes />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
